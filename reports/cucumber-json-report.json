@@ -1,0 +1,114 @@
+[
+  {
+    "description": "  As a user of cucumber.js\n  I want to have documentaion on Cucumber\n  So that I can concentrate on building awesome applications",
+    "keyword": "Feature",
+    "name": "Example feature",
+    "line": 1,
+    "id": "example-feature",
+    "tags": [],
+    "uri": "features\\navigation.feature",
+    "elements": [
+      {
+        "id": "example-feature;reading-documentaion",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Reading documentaion",
+        "tags": [
+          {
+            "name": "@tag1",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hook.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13363
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "Launch open cart url",
+            "match": {
+              "location": "features\\step_definitions\\step_definitions.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Verify title",
+            "match": {
+              "location": "features\\step_definitions\\step_definitions.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Click on Login link and Enter invalid values in username and password",
+            "match": {
+              "location": "features\\step_definitions\\step_definitions.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Click on Login button",
+            "match": {
+              "location": "features\\step_definitions\\step_definitions.js:83"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Verify the error message",
+            "match": {
+              "location": "features\\step_definitions\\step_definitions.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1201
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hook.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34075
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
