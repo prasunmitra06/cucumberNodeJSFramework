@@ -1,0 +1,127 @@
+var {defineSupportCode} = require('cucumber');
+By = require('selenium-webdriver').By,
+until = require('selenium-webdriver').until;
+var assert = require('assert'),
+    test = require('selenium-webdriver/testing'),
+    webdriver = require('selenium-webdriver'),
+    chai = require('chai'),
+expect = chai.expect;
+
+
+
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
+
+defineSupportCode(function({Given, When, Then}){
+  Given('Launch open cart url', function (callback) {
+           // Write code here that turns the phrase above into concrete actions
+           this.driver.get("https://docs.opencart.com/");
+           //callback(null,'pending');
+           callback();
+         });
+  Given('Verify title', function () {
+           // Write code here that turns the phrase above into concrete actions
+
+           var expectedTitle = "OpenCart Documentation";
+           //var title = this.driver.getTitle();
+           console.log("this.driver.getTitle(): "+this.driver.getTitle());
+           this.driver.getTitle().then(function(title) {
+           expect(title).to.equal(expectedTitle);
+           console.log("Matching");
+           //callback();
+           return true;
+          })
+                //callback(null,'pending');
+          //callback(null,'pending');
+          return false;
+         });
+  Given('Click on Login link and Enter invalid values in username and password', function () {
+                  // Write code here that turns the phrase above into concrete actions
+                this.driver.findElement(By.xpath('//*[@id="navbar-collapse-header"]/div/a[1]')).then(function(element) {
+                  element.click();
+                  sleep(3000);
+                  console.log('Yes, Login link found');
+                }, function(error) {
+                  console.log('Login Link not found');
+                  return false;
+                });
+
+
+                this.driver.findElement(By.id('input-email')).then(function(element1) {
+                  sleep(1000);
+                  element1.sendKeys("prasunmitra@abcd.com");
+                  console.log('Yes, Login emain id field found');
+                  //sleep(3000);
+                }, function(error) {
+                  console.log('Login emain id field not found');
+
+                  return false;
+                });
+
+                  //sleep(4*1000);
+
+                  this.driver.findElement(By.id('input-password')).then(function(element2) {
+                    sleep(1000);
+                    element2.sendKeys("prasunmitra");
+                    console.log('Yes, Password field found');
+                    //sleep(3000);
+                  }, function(error) {
+                    console.log('Login emain id field not found');
+                    return false;
+                  });
+
+
+
+                return true;
+                  //return true;
+          });
+  When('Click on Login button', function () {
+           // Write code here that turns the phrase above into concrete actions
+              this.driver.findElement(By.xpath('//*[@id="account-login"]/div[2]/div/div[1]/form/div[3]/div[1]/button[1]')).then(function(element3) {
+                sleep(1000);
+              element3.click();
+              sleep(1000);
+             console.log('Yes, Account login button has been clicked');
+             return true;
+             //sleep(3000);
+
+           }, function(error) {
+             console.log('Login button not found');
+             return false;
+           });
+
+           //callback(null,'pending');
+           return false;
+         });
+  Then('Verify the error message', function () {
+                  sleep(5200);
+                  this.driver.findElement(By.xpath('//*[@id="account-login"]/div[2]/div[1]/text()')).then(function(element4) {
+                    sleep(7000);
+                    var textq = element4.getText();
+                    sleep(2000);
+                    console.log("textq: "+textq);
+
+                    var errorString = "Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
+                    console.log("errorString: "+errorString);
+                    
+                    //assert.equal(textq, 'No match for E-Mail and/or Password.',"Error validated");
+                    if(textq === errorString)
+                    {
+                        return true
+                    }
+
+                    //sleep(3000);
+
+                  }, function(error) {
+                    console.log('Login error msg not found');
+                    return false;
+                  });
+          });
+});

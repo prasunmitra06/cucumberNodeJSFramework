@@ -1,110 +1,31 @@
 [
   {
-    "description": "  As a user of cucumber.js\n  I want to have documentaion on Cucumber\n  So that I can concentrate on building awesome applications",
     "keyword": "Feature",
-    "name": "Example feature",
+    "name": "API Testing Exercise Call API to change user name",
     "line": 1,
-    "id": "example-feature",
+    "id": "api-testing-exercise-call-api-to-change-user-name",
     "tags": [],
-    "uri": "features\\navigation.feature",
+    "uri": "features\\apifeatures.feature",
     "elements": [
       {
-        "id": "example-feature;reading-documentaion",
+        "id": "api-testing-exercise-call-api-to-change-user-name;change-user-name",
         "keyword": "Scenario",
-        "line": 7,
-        "name": "Reading documentaion",
-        "tags": [
-          {
-            "name": "@tag1",
-            "line": 6
-          }
-        ],
+        "line": 3,
+        "name": "Change user name",
+        "tags": [],
         "type": "scenario",
         "steps": [
           {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "features\\support\\hook.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 13363
-            }
-          },
-          {
             "arguments": [],
             "keyword": "Given ",
-            "line": 8,
-            "name": "Launch open cart url",
+            "line": 4,
+            "name": "send GET request to \"https://samples.openweathermap.org/data/2.5/forecast?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22\", dt should be \"1487246400\"",
             "match": {
-              "location": "features\\step_definitions\\step_definitions.js:23"
+              "location": "features\\step_definitions\\step_definitions.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 2
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "Verify title",
-            "match": {
-              "location": "features\\step_definitions\\step_definitions.js:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 10,
-            "name": "Click on Login link and Enter invalid values in username and password",
-            "match": {
-              "location": "features\\step_definitions\\step_definitions.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 11,
-            "name": "Click on Login button",
-            "match": {
-              "location": "features\\step_definitions\\step_definitions.js:83"
-            },
-            "result": {
-              "status": "passed"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 12,
-            "name": "Verify the error message",
-            "match": {
-              "location": "features\\step_definitions\\step_definitions.js:101"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1201
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "features\\support\\hook.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 34075
+              "duration": 1752
             }
           }
         ]
