@@ -8,10 +8,10 @@
     "uri": "features\\apifeatures.feature",
     "elements": [
       {
-        "id": "enter-city-name,-get-5-day-weather-forecast;change-user-name",
+        "id": "enter-city-name,-get-5-day-weather-forecast;enter-city-name,-get-5-day-weather-forecast",
         "keyword": "Scenario",
         "line": 3,
-        "name": "Change user name",
+        "name": "Enter city name, get 5 day weather forecast",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -19,13 +19,13 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
-            "name": "send GET request to \"https://samples.openweathermap.org/data/2.5/forecast?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22\", dt should be \"1487246400\"",
+            "name": "send GET request to \"https://samples.openweathermap.org/data/2.5/forecast?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22\", dt should be \"./weathercast.json\"",
             "match": {
-              "location": "features\\step_definitions\\step_definitions.js:6"
+              "location": "features\\step_definitions\\step_definitions.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 1499
+              "duration": 1575
             }
           }
         ]
