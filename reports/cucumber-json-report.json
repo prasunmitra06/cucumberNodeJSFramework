@@ -1,14 +1,14 @@
 [
   {
     "keyword": "Feature",
-    "name": "API Testing Exercise Call API to change user name",
+    "name": "Enter city name, get 5 day weather forecast",
     "line": 1,
-    "id": "api-testing-exercise-call-api-to-change-user-name",
+    "id": "enter-city-name,-get-5-day-weather-forecast",
     "tags": [],
     "uri": "features\\apifeatures.feature",
     "elements": [
       {
-        "id": "api-testing-exercise-call-api-to-change-user-name;change-user-name",
+        "id": "enter-city-name,-get-5-day-weather-forecast;change-user-name",
         "keyword": "Scenario",
         "line": 3,
         "name": "Change user name",
@@ -25,7 +25,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1752
+              "duration": 1499
             }
           }
         ]
